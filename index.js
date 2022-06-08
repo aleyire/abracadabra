@@ -1,11 +1,11 @@
 const express = require("express")
 const app = express()
 
-app.listen(3000, () => { // 1
+app.listen(3000, () => { 
   console.log("Server on")
 })
 
-app.use(express.static("assets")) // 2
+app.use(express.static("assets"))
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html")
@@ -26,16 +26,16 @@ app.use("/abracadabra/juego/:usuario", (req, res, next) => {
   )
   AuthUsuario 
   ? next() 
-  : res.redirect("./who.jpeg") //imagen “who.jpeg”
+  : res.redirect("/who.jpeg")
 })
 
 // 5
 app.get("/abracadabra/conejo/:n", (req, res) => {
   const n = Math.floor(Math.random() * (5 - 1)) + 1
-  const numero = req.params.n
+  const numero = Number.parseInt(req.params.n)
   numero == n
-    ? res.redirect("./conejito.jpg") 
-    : res.redirect("./voldemort.jpeg")
+    ? res.redirect("/conejito.jpg") 
+    : res.redirect("/voldemort.jpg")
 })
 
 // 6
