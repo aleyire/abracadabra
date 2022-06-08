@@ -2,7 +2,7 @@
 
 Desafío en donde se desarrolla un servidor con Express que sirve un sitio web estático con temática de magia, donde se presentan 4 sombreros y al hacer click en uno de estos se encuentra el conejo oculto.
 
-![](https://tenor.com/IU69.gif)
+![](https://github.com/aleyire/abracadabra/blob/main/assets/rabbit.gif)
 
 ### Materia aplicada
 
